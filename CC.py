@@ -58,7 +58,29 @@ for i5 in range(101):
 print(sum5)
 
 # example:dic & set
-print()
+print("----example:dic & set----")
 dictionary = {'yaodaxia':617,'yaoyawei':431,'huangying':543}
 print(dictionary['yaodaxia'])
-
+dictionary['yaodaxia'] = 607
+print("yaodaxia:%d"%dictionary['yaodaxia'])
+if 'yaodaxia' in dictionary:
+    print("yaodaxia is in dictionary")
+else:
+    print("yaodaxia is not in dictionary")
+print(dictionary.get('yaodaxi'))
+dictionary.pop('yaodaxia') # delete element
+print("dict.pop('yaodaxia'):",dictionary)
+s = set([1,1,2,2,2,3,3])
+print("set([1,1,2,2,2,3,3]):",s)
+s.add(4)
+print("s.add(4):",s)
+s.remove(1)
+print("s.remove(1):",s)
+s1 = set([3,4,5,56])
+print("s:",s)
+print("s1:",s1)
+print("s&s1:",s&s1)
+print("s|s1:",s|s1)
+a = 'yaoyawei'
+b = a.replace('a','A')
+print(a,b)
