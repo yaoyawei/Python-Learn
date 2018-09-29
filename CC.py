@@ -61,3 +61,4 @@ print(sum5)
 print()
 dictionary = {'yaodaxia':617,'yaoyawei':431,'huangying':543}
 print(dictionary['yaodaxia'])
+
