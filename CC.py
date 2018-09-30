@@ -84,3 +84,11 @@ print("s|s1:",s|s1)
 a = 'yaoyawei'
 b = a.replace('a','A')
 print(a,b)
+
+# example:function
+print("----example:function----")
+af = 12345
+print("af=%d"%af)
+print("hex(af)=%s"%hex(af))
+print("oct(af)=%s"%oct(af))
+print("bin(af)=%s"%bin(af))
