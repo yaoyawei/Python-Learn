@@ -1,3 +1,4 @@
 # Python-Learn
-> My first Python test project.
-> Coding on my macbook pro.
+1. My first Python test project.
+2. Coding on my macbook pro.
+3. 
