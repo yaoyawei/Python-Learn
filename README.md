@@ -3,3 +3,5 @@
 2. Coding on my macbook pro.
 3. test git 1
 4. test git 2
+5. test git 3 on macbook pro
+6. 
