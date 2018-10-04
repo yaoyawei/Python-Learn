@@ -92,3 +92,60 @@ print("af=%d"%af)
 print("hex(af)=%s"%hex(af))
 print("oct(af)=%s"%oct(af))
 print("bin(af)=%s"%bin(af))
+
+print("----define function----")
+def area_of_circle(x):
+    return 3.141592653*x*x
+print("area of circle 10 = %d"%area_of_circle(10))
+
+print("---nop():pass----")
+def nop():
+    pass
+
+print("----TypeError----")
+def my_abs(x):
+    if not isinstance(x,(int,float)):
+        raise TypeError('bad operand type')
+    if x>=0:
+        return x
+    else:
+        return -x
+
+def int_switch(x,y,z):
+    return x*x,y*y,z*z #return a tuple
+print(int_switch(2,5,9))
+
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+print("power(12,2)=%d"%power(12,3))
+print("power(12,2)=%d"%power(13))
+
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+print("calc(1,2,3,4,5,6)=%d"%calc(1,2,3,4,5,6))
+
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+
+person('yaoyawei',28,gender='M',job='Engineer')
+
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)
+
+print("fact(10)=%d"%fact(10))
+
+# example:tick & others
+
+list_yao = list(range(1,20,1))
+print("list_yao = %s"%list_yao)
+print("list_yao(1~50) = %s"%list_yao[1:5])
+
