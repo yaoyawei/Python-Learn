@@ -144,8 +144,29 @@ def fact(n):
 print("fact(10)=%d"%fact(10))
 
 # example:tick & others
-
+# example:高级特性
+print("----切片----")
 list_yao = list(range(1,20,1))
 print("list_yao = %s"%list_yao)
 print("list_yao(1~50) = %s"%list_yao[1:5])
+
+print("----迭代----")
+from collections import Iterable
+print(isinstance('abc', Iterable)) # str是否可迭代
+print(isinstance([1,2,3], Iterable)) # list是否可迭代
+print(isinstance(123, Iterable) )# 整数是否可迭代
+for x, y in [(1, 1), (2, 4), (3, 9)]:
+    print(x, y)
+
+print("----生成list----")
+print([x * x for x in range(1, 11)])
+print([m + n for m in 'ABC' for n in 'XYZ'])
+
+print("----generator----")
+L_g = (x * x for x in range(10))
+print(next(L_g))
+for n in L_g:
+    print(n)
+
+
 
