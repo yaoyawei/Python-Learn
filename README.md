@@ -7,3 +7,5 @@
 6. test git 4 on yaodaxia-GPC
 7. the end of CC.py
 8. new Higher_order_function.py
+9. add map() & reduce() & filter() & sorted()
+10. 
