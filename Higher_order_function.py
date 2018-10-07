@@ -57,4 +57,52 @@ print(sorted(['bob', 'about', 'Zoo', 'Credit']))    # 默认按照ASCII的大小
 print(sorted([36, 5, -12, 9, -21], key=abs))    #
 print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower))
 
+# example:函数作为返回值
+print("----函数作为返回值----")
+def lazy_sum(*args):    #......
+    def sum():
+        ax = 0
+        for n in args:
+            ax = ax + n
+        return ax
+    return sum
+func1 = lazy_sum(1,2,3,4,5)
+print("type of func1 is %s"%type(func1)) # <class 'function'>
+print("func1() = %d"%func1())
+
+func2 = lazy_sum(2,3,4,5,6)
+print("func1 == func2:%s"%(func1==func2)) # func1 不等于 func2
+
+# example: 匿名函数
+print("----匿名函数----")
+print(list(map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9])))
+
+def build(x, y):
+    return lambda: x * x + y * y
+    # 匿名函数作为返回值
+func3 = build(3,4)
+print("type of func3 is %s"%type(func3))    # <class 'function'>
+print("func3(build(3,4)) = %d"%func3())     # 25 = 3*3 + 4*4
+
+# example: 装饰器（Decorator）
+print("----decorator----")
+def today_date():
+    print("2018-10-06")
+
+print("today_date._name_:%s"%today_date.__name__)
+
+def log(func):
+    def wrapper(*args, **kw):
+        print('call %s():' % func.__name__)
+        return func(*args, **kw)
+    return wrapper
+
+@log
+def yesterday_date():
+    print("2018-10-05")
+
+yesterday_date()
+
+
+
 

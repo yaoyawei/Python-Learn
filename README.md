@@ -8,4 +8,5 @@
 7. the end of CC.py
 8. new Higher_order_function.py
 9. add map() & reduce() & filter() & sorted()
-10. 
+10. add 函数、匿名函数、 装饰器（Decorator）
+11. 
