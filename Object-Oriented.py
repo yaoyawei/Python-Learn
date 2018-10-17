@@ -116,3 +116,24 @@ del s.name # 如果删除实例的name属性
 print("s.name = %s"%s.name) # 再次调用s.name，由于实例的name属性没有找到，类的name属性就显示出来了
 print("----实例属性和类属性的总结：----")
 print("在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。")
+
+
+# 枚举类
+print("----例子：枚举类----")
+from enum import Enum
+class Gender(Enum):
+    Male = 0
+    Female = 1
+
+class Student_y(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+bart = Student_y('Bart', Gender.Male)
+if bart.gender == Gender.Male:
+    print('测试通过!')
+else:
+    print('测试失败!')
+
+
