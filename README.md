@@ -12,3 +12,4 @@
 10. add 函数、匿名函数、 装饰器（Decorator）.
 11. add Object-Oriented.py about Object-Oriented features.
 12. add Object-Oriented.py about Object-Oriented features-2.
+13. add coding_for_debug.py about python learning.
