@@ -14,3 +14,4 @@
 12. add Object-Oriented.py about Object-Oriented features-2.
 13. add coding_for_debug.py about python learning.
 14. add io.py.
+15. add StringIO和BytesIO.
